@@ -1,0 +1,13 @@
+{
+  "name": "2047",
+  "version": "1.0.0",
+  "description": "Fake 2048",
+  "main": "index.js",
+  "author": "pcbach",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "nedb": "^1.8.0"
+  }
+}
