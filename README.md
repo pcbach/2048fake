@@ -1,1 +1,1 @@
-2048fake
+https://fake2048.herokuapp.com/
