@@ -1,4 +1,6 @@
 var key = "block";
+var score = 0;
+updateScore();
 for(var i = 1 ; i <= 4 ; i++ ){
 	for(var j = 1;j <= 4; j++){
 		var id = key + i + "-" + j; 
@@ -22,7 +24,7 @@ while(x_===x && y_===y){
 id = key + x_ + "-" + y_; 
 blockRef = document.getElementById(id);
 blockRef.innerHTML = "<p>2</p>";
-			blockRef.className = "n2";
+blockRef.className = "n2";
 
 document.onkeydown = checkKey;
 
@@ -31,20 +33,29 @@ function checkKey(e) {
     if (e.keyCode == '38') {
     	console.log("up");
     	upMove();
+    	updateScore();
         // up arrow
     }else if (e.keyCode == '40') {
     	console.log("down");
     	downMove();
+    	updateScore();
         // down arrow
     }else if (e.keyCode == '37') {
     	console.log("left");
     	leftMove();
+    	updateScore();
        // left arrow
     }else if (e.keyCode == '39') {
     	console.log("right");
     	rightMove();
+    	updateScore();
        // right arrow
     }
+}
+
+function updateScore(){
+	var scoreRef = document.getElementById("score");
+	scoreRef.innerHTML = "<p>"+score+"</p>";
 }
 function gen(){
 	var val = Math.floor((Math.random() * 3) + 1);
@@ -71,7 +82,7 @@ function gen(){
 function processs(array){
 	var resArray = [];
 	for(var i = 0 ; i < array.length ; i++ ){
-		if(array[i]==array[i+1]){resArray.push(array[i]*2);i++;}
+		if(array[i]==array[i+1]){resArray.push(array[i]*2);i++;score+=array[i]*2;}
 		else resArray.push(array[i]);
 	}
 	return resArray;

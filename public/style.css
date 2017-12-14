@@ -2,21 +2,29 @@
 	vertical-align:top;
 	display: inline-block;
 	position: relative;
-	width: 20vh;
-	height:20vh;
+	width: 17.5vh;
+	height:17.5vh;
 	text-align: center;
-	margin-left: -1px;
-	margin-right: -1px;
-	margin-top: 1px;
-	margin-bottom: 1px;
+	margin-left: -2px;
+	margin-right: -2px;
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
 
 [id*=row] {
-	margin: 0 calc((100vw - 80vh)/2) 0 calc((100vw - 80vh)/2);
+	margin: 0 calc((100vw - 70vh - 16px)/2) 0 calc((100vw - 70vh - 16px)/2);
 	overflow: hidden;
-	width: 100%;
 }
-
+[id*=score] {
+	position: relative;
+	font-size: 5vh;
+	height:10vh;
+	overflow: hidden;
+	text-align: center;
+}
+[id*=score] > p {
+	line-height: 10vh;
+}
 [class=blank] {
 	background-color: #f44242;
 }
